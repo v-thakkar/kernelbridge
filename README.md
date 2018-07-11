@@ -15,6 +15,7 @@ List of bunch of tools used by kernel community. Note that depending upon how ac
 2. [Coccinelle](https://github.com/coccinelle/coccinelle)
 3. [LDV Project](http://linuxtesting.org/ldv)
 4. [Sparse](https://kernelnewbies.org/Sparse)
+
 Bunch of other scripts/projects can be found under scripts/ directory in the kernel source code.
 
 ## Contributing to ongoing Projects
