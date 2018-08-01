@@ -31,3 +31,5 @@ Kernel community decided to move from .txt files to using Sphinix for kernel doc
 3. Attribute Documentation:
 
 Outreachy intern Aishwarya Pant worked on attribute documentation during her internship period and developed a tool named ['abi2doc'](https://github.com/aishpant/attribute-documentation). There are still many sysfs attributes which can be documented. Check her [last post](https://aishpant.github.io/blog/outreachy-recap/) on the project.
+
+You can checkout bunch of other ideas by Laura Abbott [here](https://www.labbott.name/blog/2016/08/15/ideas-for-getting-started-in-the-linux-kernel/)
