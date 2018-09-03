@@ -22,7 +22,7 @@ Bunch of other scripts/projects can be found under scripts/ directory in the ker
 
 1. [Kernel Self protection project](https://kernsec.org/wiki/index.php/Kernel_Self_Protection_Project)
 
-Check the wiki and TODO list. If unsure about the tasks from TODO, drop a mail in teh mailing list.
+Check the wiki and TODO list. If unsure about the tasks from TODO, drop a mail in the mailing list.
 
 2. Documentation project:
 
