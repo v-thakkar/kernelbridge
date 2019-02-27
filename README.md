@@ -8,6 +8,18 @@ A bunch of kernel tasks/ideas that can be taken by Kernel newbies.
 So, sometimes it's better to ask about it in the mailing list CC'ing the original developer/author who put the FIXME or TODO line in the file (Use 'git blame' and 'git show' to get the original developer name). :)
 4. The following task will give you an understanding how kernel drivers embed a generic data structure in a driver-specific data structure and use the [container_of()](https://elixir.bootlin.com/linux/latest/source/include/linux/kernel.h#L995) macro to cast from the embedded data structure to the outer data structure. This is a very common pattern in the kernel and often referred to as "subclassing": A number of [MMC host drivers](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/drivers/mmc/host) are doing it wrong and fail to use the macro. A [patch](https://patchwork.kernel.org/patch/10794583/) was submitted to the list which fixes the issue for a single driver. The patch claims that two data structures are always adjacent in memory. Verify that by finding out how the data structures are allocated. There are 32 other drivers affected by the same anti-pattern. Your quest is to fix as many of them as you can by following the example of the existing patch. Use `git grep -e '->mmc = ' -- drivers/mmc/host` to identify drivers which need fixing. Be sure to at least compile-test every driver you change. Use a cross-compiler if necessary. Use `git log` as well as [get_maintainer.pl](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/scripts/get_maintainer.pl) to identify people who might be able to test or review your change. Good luck!
 
+## Cleanup patches (Outreachy applicants are encouraged to tackle the following cleanup tasks):
+
+1. Functions that are never used.
+
+2. Functions that are never used outside of their current file and thus should be static.
+
+3. Variables that are never used.
+
+4. Variables that are assigned but are never used.
+
+5. Spelling mistakes.
+
 ## TOOLs
 
 List of bunch of tools used by kernel community. Note that depending upon how actively tool is used and plans from project developers, tasks can vary.
